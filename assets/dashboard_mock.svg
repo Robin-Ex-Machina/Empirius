@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+  <defs>
+    <style>
+      .background { fill: #f5f7fa; }
+      .window { fill: #ffffff; stroke: #c3ccd9; stroke-width: 2; rx: 10; ry: 10; }
+      .title { font: bold 28px 'DejaVu Sans', Arial, sans-serif; fill: #1f2933; }
+      .subtitle { font: 16px 'DejaVu Sans', Arial, sans-serif; fill: #52606d; }
+      .table-header { fill: #d9e2ec; }
+      .table-text { font: 15px 'DejaVu Sans', Arial, sans-serif; fill: #102a43; }
+      .detail-title { font: bold 18px 'DejaVu Sans', Arial, sans-serif; fill: #243b53; }
+      .code { font: 14px 'Source Code Pro', 'Courier New', monospace; fill: #243b53; }
+    </style>
+  </defs>
+  <rect class="background" width="1000" height="600" />
+  <g transform="translate(40 30)">
+    <rect class="window" width="920" height="540" rx="18" ry="18" />
+    <text class="title" x="60" y="80">Open Sensor Dashboard</text>
+    <text class="subtitle" x="60" y="112">Live readings from public environmental sensors</text>
+
+    <g transform="translate(60 140)">
+      <rect class="window" width="840" height="260" rx="12" ry="12" />
+      <rect class="table-header" x="0" y="0" width="840" height="46" rx="12" ry="12" />
+      <text class="table-text" x="24" y="30">Category</text>
+      <text class="table-text" x="204" y="30">Last update (UTC)</text>
+      <text class="table-text" x="424" y="30">Status</text>
+      <text class="table-text" x="564" y="30">Summary</text>
+
+      <g transform="translate(0 58)">
+        <rect fill="#ffffff" width="840" height="48" />
+        <text class="table-text" x="24" y="28">Weather</text>
+        <text class="table-text" x="204" y="28">2024-05-02 14:20:13</text>
+        <text class="table-text" x="424" y="28" fill="#0f915b">OK</text>
+        <text class="table-text" x="564" y="28">Temp 21.3°C; Wind 5.2 m/s</text>
+      </g>
+
+      <g transform="translate(0 106)">
+        <rect fill="#f0f4f8" width="840" height="48" />
+        <text class="table-text" x="24" y="28">Lightning</text>
+        <text class="table-text" x="204" y="28">2024-05-02 14:19:08</text>
+        <text class="table-text" x="424" y="28" fill="#f7c948">Alert</text>
+        <text class="table-text" x="564" y="28">12 strikes within 100 km</text>
+      </g>
+
+      <g transform="translate(0 154)">
+        <rect fill="#ffffff" width="840" height="48" />
+        <text class="table-text" x="24" y="28">Seismic</text>
+        <text class="table-text" x="204" y="28">2024-05-02 14:17:41</text>
+        <text class="table-text" x="424" y="28" fill="#0f915b">OK</text>
+        <text class="table-text" x="564" y="28">M 1.8 - 32 km SW of Townsville</text>
+      </g>
+
+      <g transform="translate(0 202)">
+        <rect fill="#f0f4f8" width="840" height="48" />
+        <text class="table-text" x="24" y="28">Gravity</text>
+        <text class="table-text" x="204" y="28">2024-05-02 14:15:12</text>
+        <text class="table-text" x="424" y="28" fill="#0f915b">OK</text>
+        <text class="table-text" x="564" y="28">Δg: -3.2 μGal</text>
+      </g>
+    </g>
+
+    <g transform="translate(60 440)">
+      <rect class="window" width="840" height="120" rx="12" ry="12" />
+      <text class="detail-title" x="24" y="36">Selected sensor details</text>
+      <text class="code" x="24" y="62">
+        <tspan x="24" dy="0">{</tspan>
+        <tspan x="24" dy="20">  "timestamp": "2024-05-02T14:19:08Z",</tspan>
+        <tspan x="24" dy="20">  "status": "alert",</tspan>
+        <tspan x="24" dy="20">  "message": "Regional lightning spike",</tspan>
+        <tspan x="24" dy="20">  "values": {</tspan>
+        <tspan x="24" dy="20">    "strike_count": 12,</tspan>
+        <tspan x="24" dy="20">    "radius_km": 100,</tspan>
+        <tspan x="24" dy="20">    "intensity": "moderate"</tspan>
+        <tspan x="24" dy="20">  }</tspan>
+        <tspan x="24" dy="20">}</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
